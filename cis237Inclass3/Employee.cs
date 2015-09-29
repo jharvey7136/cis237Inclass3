@@ -26,7 +26,7 @@ namespace cis237Inclass3
             set { lastName = value; }
         }
 
-        public string FirstName
+        public string Department
         {
             get { return department; }
             set { department = value; }
@@ -39,6 +39,20 @@ namespace cis237Inclass3
             this.lastName = LastName;
             this.department = Department;
         }
+
+
+        public override string ToString()
+        {
+            return this.FirstName + " " + this.LastName;
+        }
+
+
+        protected virtual void PrintFullName()
+        {
+            Console.WriteLine(this.FirstName + " " + this.LastName);
+
+        }
+
 
 
     }
