@@ -40,11 +40,20 @@ namespace cis237Inclass3
 
 
 
-        public decimal CalculateWeeklyGross()
+        public override decimal CalculateWeeklyGross()
         {
             return hourlyRate * (decimal)hoursWorked;
 
 
         }
+
+
+        public override string GetDepartmentTwice()
+        {
+            return base.GetDepartmentTwice() + base.GetDepartmentTwice();
+        }
+
+
+
     }
 }

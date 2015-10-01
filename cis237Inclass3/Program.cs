@@ -12,9 +12,15 @@ namespace cis237Inclass3
         {
             SalaryEmployee salaryEmployee = new SalaryEmployee("Ringo", "DeathStarr", "IT", 15000);
 
+
+
+
             Console.WriteLine(salaryEmployee.ToString());
 
             Console.WriteLine(salaryEmployee.CalculateWeeklyGross());
+
+            Console.WriteLine(salaryEmployee.GetDepartmentTwice());
+
 
             Console.WriteLine("*********************");
 
@@ -23,6 +29,10 @@ namespace cis237Inclass3
 
             Console.WriteLine(hourlyEmployee.ToString());
             Console.WriteLine(hourlyEmployee.CalculateWeeklyGross());
+
+            Console.WriteLine(hourlyEmployee.GetDepartmentTwice());
+
+            Console.ReadKey();
         }
     }
 }
