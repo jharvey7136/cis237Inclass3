@@ -10,7 +10,7 @@ namespace cis237Inclass3
     {
         static void Main(string[] args)
         {
-            SalaryEmployee salaryEmployee = new SalaryEmployee("Ringo", "DeathStarr", "IT", 15000);
+            SalaryEmployee salaryEmployee = new SalaryEmployee("Ringo", "DeathStarr", "IT", 15000m);
 
 
 
@@ -31,6 +31,28 @@ namespace cis237Inclass3
             Console.WriteLine(hourlyEmployee.CalculateWeeklyGross());
 
             Console.WriteLine(hourlyEmployee.GetDepartmentTwice());
+
+            Console.WriteLine("*************NEW SHIT***************");
+
+            HourlyEmployee joe = new HourlyEmployee("Joe", "Dirtbag", "HR", 9.37m);
+            joe.HoursWorked = 87;
+            SalaryEmployee dick = new SalaryEmployee("Dick", "Head", "PR", 15000m);
+            Employee ronald = new SalaryEmployee("Mrs.", "Ronfonbob", "IT", 42369m);
+
+            IEmployee[] employeeList = {
+                                           joe,
+                                           dick,
+                                           new SalaryEmployee("Ben", "Dover", "ST", 99075m),
+                                           ronald
+                                       };
+            foreach(IEmployee employee in employeeList)
+            {
+                Console.WriteLine(employee.ToString());
+                Console.WriteLine(employee.CalculateWeeklyGross());
+                Console.WriteLine();
+
+            }
+
 
             Console.ReadKey();
         }
