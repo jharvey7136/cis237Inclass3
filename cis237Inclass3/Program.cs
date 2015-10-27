@@ -39,6 +39,12 @@ namespace cis237Inclass3
             SalaryEmployee dick = new SalaryEmployee("Dick", "Head", "PR", 15000m);
             Employee ronald = new SalaryEmployee("Mrs.", "Ronfonbob", "IT", 42369m);
 
+            IEmployee newPerson = new HourlyEmployee("Some", "OneElse", "WK", 12.43m);
+
+            
+            //downcast
+            ((HourlyEmployee)newPerson).HoursWorked = 21;
+
             IEmployee[] employeeList = {
                                            joe,
                                            dick,
