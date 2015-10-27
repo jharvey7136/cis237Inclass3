@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237Inclass3
 {
-    interface IEmployee
+    interface IEmployee : IComparable
     {
         decimal CalculateWeeklyGross();
 

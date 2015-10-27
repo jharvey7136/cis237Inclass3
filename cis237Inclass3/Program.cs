@@ -42,8 +42,12 @@ namespace cis237Inclass3
             IEmployee newPerson = new HourlyEmployee("Some", "OneElse", "WK", 12.43m);
 
             
-            //downcast
-            ((HourlyEmployee)newPerson).HoursWorked = 21;
+            //downcast from type iemployee to type hourly employee
+            HourlyEmployee myStack;
+            myStack = (HourlyEmployee)newPerson;
+
+            dick.CompareTo(joe);
+
 
             IEmployee[] employeeList = {
                                            joe,

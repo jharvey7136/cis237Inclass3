@@ -61,5 +61,19 @@ namespace cis237Inclass3
             return this.Department + this.Department;
         }
 
+
+         public int CompareTo(object obj)
+        {
+             //decalre and downcast the object that is passed into this method
+            Employee otherEmployee = (Employee)obj;
+
+            decimal thisWeeklyGross = this.CalculateWeeklyGross();
+            decimal otherGuyWeeklyGross = otherEmployee.CalculateWeeklyGross();
+
+            return thisWeeklyGross.CompareTo(otherGuyWeeklyGross);
+        }
+
+
+
     }
 }
